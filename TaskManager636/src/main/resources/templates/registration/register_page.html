@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <!-- Bootstrap CSS CDN -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        input:focus {
+            border-color: red;
+            box-shadow: 0 0 5px red;
+            outline: none;
+        }
+        input:valid {
+            border-color: red;
+            box-shadow: 0 0 5px red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Registration</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/register" method="POST">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="userName" name="username" required placeholder="Enter Your Username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="country">Country:</label>
+                            <select id="country" name="country" required>
+                                <option th:each="c : ${T(com.oss.unist.hr.model.enums.Country).values()}"
+                                        th:value="${c}" th:text="${c.country}" th:selected="${registerRequest.country == c}">
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password"
+                                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{12,}"
+                                   title="Must contain at least one number, one uppercase and one lowercase letter, and at least 12 or more characters">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password:</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                        </div>
+                        <div th:if="${error}" class="error" style="color: red;">
+                            <p th:text="${error}"></p>
+                        </div>
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-danger">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <span>Already have an account? <a href="/login">Log in</a></span>
+                    <hr>
+                    <span>Want to visit the Homepage? <a href="/">Go To Homepage</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

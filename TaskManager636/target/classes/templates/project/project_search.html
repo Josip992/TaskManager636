@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Project</title>
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h1>Search Project</h1>
+  <form method="get" action="/search-project-execute">
+    <div class="form-group">
+      <input type="text" class="form-control" id="projectName" name="projectName" placeholder="Enter project name" th:value="${projectName}">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Project</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2>Create New Project</h2>
+    <form method="post" action="/create-project">
+        <div class="form-group">
+            <label for="projectName">Project Name:</label>
+            <input type="text" class="form-control" id="projectName" name="projectName" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Project</button>&nbsp;
+    </form>
+    <div th:if="${error}" class="mt-3" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+    </div>
+</div>
+&nbsp;
+<div class="container">
+    <a href="/dashboard" class="btn btn-secondary">Return To Dashboard</a>
+    <a href="/logout" class="btn btn-danger">Logout</a>
+</div>
+</body>
+</html>

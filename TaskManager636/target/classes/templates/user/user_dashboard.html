@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h2 class="text-center">Welcome, <span th:text="${username}"></span>!</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6 mx-auto">
+                            <a href="/tasks" class="btn btn-primary btn-lg btn-block">Tasks</a>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 mx-auto">
+                            <a href="/projects" class="btn btn-primary btn-lg btn-block">Projects</a>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 mx-auto">
+                            <a href="/work" class="btn btn-primary btn-lg btn-block">Let's work!</a>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 mx-auto">
+                            <a href="/logout" class="btn btn-danger btn-lg btn-block">Logout</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

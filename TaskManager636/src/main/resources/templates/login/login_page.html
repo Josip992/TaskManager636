@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        input:focus {
+            border-color: red;
+            box-shadow: 0 0 5px red;
+            outline: none;
+        }
+        input:valid {
+            border-color: red;
+            box-shadow: 0 0 5px red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Sign In</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/execute-login" method="POST" th:object="${loginRequest}">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Example@gmail.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-danger">Sign In</button>
+                        </div>
+                        <div th:if="${error}" class="mt-3" style="color: red;">
+                            <p th:text="${error}"></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <hr>
+                    <span>Don't have an account? <a href="/register">Register</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

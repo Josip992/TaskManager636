@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Search Results</h1>
+    <div th:if="${projects.empty}">
+        <p>No projects found.</p>
+    </div>
+    <div th:unless="${projects.empty}">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="project : ${projects}">
+                <td th:text="${project.projectName}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <a href="/dashboard" class="btn btn-primary">Return to Dashboard</a>
+    <a href="/logout" class="btn btn-danger">Logout</a>
+</div>
+</body>
+</html>
