@@ -33,9 +33,16 @@ User and task search functionality (for team leaders and users respectively)
 
 Dashboard for each user (displaying tasks and projects assigned to the user and their status)
 ![UserDashboad](https://github.com/user-attachments/assets/7f07709c-c456-4b1e-88de-19f134ffc575)
+![projectDashboard](https://github.com/user-attachments/assets/03d64ddd-7063-47eb-9ebb-3f5151c98668)
+![workDashboard](https://github.com/user-attachments/assets/0e3ad7a7-7651-4a0b-a122-4a5fb2d817b5)
 
 Graphs for data visualization and analysis
 ![NumberOfTasksCompletedPerMonth](https://github.com/user-attachments/assets/9b27ef8d-f324-437e-89e1-265a6b353b7a)
 
 CRUD operations for all database objects (users, tasks, projects and admins)
 ![ProjectCreate](https://github.com/user-attachments/assets/6ea3d4b9-c2ee-4028-a255-d07a1f771510)
+
+ADMIN dashboard
+![adminPanel](https://github.com/user-attachments/assets/ca8ac781-16a1-4bae-bdad-4490ec0b40dd)
+![AdminPanel2![AdminUpadtesUser](https://github.com/user-attachments/assets/b05272f9-73e2-4d8b-9cc5-a3cf7583f6c6)
+PNG](https://github.com/user-attachments/assets/972b530c-4dbd-441e-9edd-440205369de2)
