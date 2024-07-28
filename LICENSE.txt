@@ -1,0 +1,7 @@
+# Custom License
+
+This software is the property of Josip Barišić. Unauthorized copying, distribution, modification, or use of this software is strictly prohibited.
+
+For permissions, please contact: workflow992@gmail.com
+
+© 2024 Josip Barišić. All rights reserved.
